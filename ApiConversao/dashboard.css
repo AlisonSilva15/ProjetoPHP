@@ -1,0 +1,31 @@
+.form-dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.form-dashboard label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-dashboard input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.form-dashboard button {
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+.sair-dashboard {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}

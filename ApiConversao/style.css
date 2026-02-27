@@ -8,6 +8,7 @@
     font-family: "Poppins", sans-serif;
 } 
 
+/* GERAL E INDEX */
 body{
     display: flex;
     justify-content: center;
@@ -127,3 +128,8 @@ body{
 .register-link a:hover{
     text-decoration: underline;
 }
+
+/* PAGINA DASHBOARD */
+
+
+
