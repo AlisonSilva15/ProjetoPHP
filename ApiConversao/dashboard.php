@@ -18,7 +18,7 @@ include 'auth.php';
         <form action="conversao.php" method="get" class="form-dashboard">
             <label for="din">Quantos R$ você possui?</label>
             <input type="number" name="din" id="din" step="0.01">
-            <input type="submit" value="Converter">
+            <input class="btn-converter" type="submit" value="Converter">
         </form>
         <a href="logout.php" class="sair-dashboard">Sair</a>
     </main>
