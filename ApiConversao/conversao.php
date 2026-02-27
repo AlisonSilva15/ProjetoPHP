@@ -12,7 +12,7 @@ include 'auth.php';
 </head>
 
 <body>
-    <main>
+    <main class="container">
 
         <h1>Conversor de moedas</h1>
 
@@ -45,10 +45,24 @@ include 'auth.php';
         $dólar = $real / $cotação;
 
         $padrão = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
-
-        echo "Seus " . numfmt_format_currency($padrão, $real, "BRL") . " equivalem a " . numfmt_format_currency($padrão, $dólar, "USD")
         ?>
-        <button onclick="javascript:history.go(-1)">Voltar</button>
+
+        <div class="resultado-container">
+
+    <p class="resultado-texto">
+        <?php
+        echo "Seus " .
+            numfmt_format_currency($padrão, $real, "BRL") .
+            " equivalem a " .
+            numfmt_format_currency($padrão, $dólar, "USD");
+        ?>
+    </p>
+
+    <button class="btn-voltar" onclick="history.back()">
+        Voltar
+    </button>
+
+</div>
 
     </main>
 
