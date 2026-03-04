@@ -9,6 +9,7 @@ if (isset($_GET['erro'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,41 +20,47 @@ if (isset($_GET['erro'])) {
 
 <body>
 
-<?php if ($erro): ?>
-    <div class="erro" style="background-color: coral; margin: 10px; padding: 10px;">
-        <?php echo $erro; ?>
-    </div>
-<?php endif; ?>
 
-<main class="container">
-    <form method="post" action="auth.php">
-        <h1>Login</h1>
+    <main class="container">
 
-        <div class="input-box">
-            <input type="email" name="usuario" placeholder="Usuário" required>
-            <i class="bx bxs-user"></i>
-        </div>
 
-        <div class="input-box">
-            <input type="password" name="senha" placeholder="Senha" required>
-            <i class="bx bxs-lock-alt"></i>
-        </div>
+        <form method="post" action="auth.php">
+            <h1>Login</h1>
 
-        <div class="remember-forgot">
+            <?php if ($erro): ?>
+                <div class="erro">
+                    <?php echo $erro; ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="input-box">
+                <input type="email" name="usuario" placeholder="Usuário" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="senha" placeholder="Senha" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <!-- <div class="remember-forgot">
             <label>
                 <input type="checkbox" name="lembrar">
                 Lembrar senha
             </label>
             <a href="#">Esqueci senha</a>
         </div>
+        PARTE DESCONTINUADA QUE MOSTRAVA LEMBRAR E ESQUECI SENHA
+        -->
 
-        <button type="submit" class="login">Login</button>
+            <button type="submit" class="login">Login</button>
 
-        <div class="register-link">
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
-        </div>
-    </form>
-</main>
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+        </form>
+    </main>
 
 </body>
+
 </html>

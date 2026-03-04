@@ -19,13 +19,14 @@ body{
 
 .container{
     width: 420px;
-    background-color: transparent;
+     background-color: rgba(255, 255, 255, 0.08);
     border: 2px solid rgba(43, 41, 41, 0.2);
     border-radius: 10px;
     color: whitesmoke;
     padding: 30px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     backdrop-filter: blur(10px);
+    
     
 }
 
@@ -69,7 +70,8 @@ body{
     top: 27%;
 }
 
-.remember-forgot{
+/* PARTE QUE FOI DESCONTINUADA DE CSS  
+ .remember-forgot{
     display:flex;
     justify-content: space-between;
     margin: -15px 0 15px;
@@ -90,7 +92,7 @@ body{
 
 .remember-forgot a:hover{
     text-decoration: underline;
-}
+}   */
 
 /* botão de enviar */
 .login{
@@ -127,6 +129,17 @@ body{
 
 .register-link a:hover{
     text-decoration: underline;
+}
+
+.erro{
+    
+    background-color: #ec5f00;
+    color: white;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
 }
 
 /* Conversao */
