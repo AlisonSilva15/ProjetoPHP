@@ -23,12 +23,22 @@
     border: none;
     cursor: pointer;
 }
-.sair-dashboard {
-    display: block;
+.register-link{
+    font-size: 14px;
     text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
+    margin: 20px 0 15px;
 }
+
+.register-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.register-link a:hover{
+    text-decoration: underline;
+}
+
 .form-dashboard .btn-converter{
     cursor: pointer;
 }

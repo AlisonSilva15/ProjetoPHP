@@ -25,7 +25,7 @@ if (isset($_GET['erro'])) {
 
 
         <form method="post" action="auth.php">
-            <h1>Login</h1>
+            <h1>Conversor de Moedas</h1>
 
             <?php if ($erro): ?>
                 <div class="erro">
@@ -34,7 +34,7 @@ if (isset($_GET['erro'])) {
             <?php endif; ?>
 
             <div class="input-box">
-                <input type="email" name="usuario" placeholder="Usuário" required>
+                <input type="email" name="usuario" placeholder="Seu email" required>
                 <i class="bx bxs-user"></i>
             </div>
 
@@ -43,20 +43,14 @@ if (isset($_GET['erro'])) {
                 <i class="bx bxs-lock-alt"></i>
             </div>
 
-            <!-- <div class="remember-forgot">
-            <label>
-                <input type="checkbox" name="lembrar">
-                Lembrar senha
-            </label>
-            <a href="#">Esqueci senha</a>
-        </div>
-        PARTE DESCONTINUADA QUE MOSTRAVA LEMBRAR E ESQUECI SENHA
-        -->
+            <div class="remember-forgot">
+                <a href="#">Esqueci senha</a>
+            </div>
 
             <button type="submit" class="login">Login</button>
 
             <div class="register-link">
-                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+                <p>Não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
             </div>
         </form>
     </main>
