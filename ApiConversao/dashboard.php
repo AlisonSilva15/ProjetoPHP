@@ -8,7 +8,6 @@ include 'auth.php';
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dashboard.css">
 </head>
 
 <body>
@@ -18,7 +17,7 @@ include 'auth.php';
         <form action="conversao.php" method="get" class="form-dashboard">
             <label for="din">Quantos R$ você possui?</label>
             <input type="number" name="din" id="din" step="0.01">
-            <input class="btn-converter" type="submit" value="Converter">
+            <input class="login" type="submit" value="Converter">
         </form>
         <div class="register-link">
         <a href="logout.php">Sair</a>

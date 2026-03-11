@@ -1,23 +1,33 @@
 <?php
 session_start();
 
+require 'conexao.php';
 /*
 |--------------------------------------------------------------------------
 | — LOGIN (recebe POST)
 |--------------------------------------------------------------------------
 */
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    if (
-        isset($_POST['usuario'], $_POST['senha']) &&
-        $_POST['usuario'] === 'Alison@email' &&
-        $_POST['senha'] === '123'
-    ) {
-        $_SESSION['usuario'] = $_POST['usuario'];
-        header('Location: dashboard.php');
+if( $_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $email = $_POST['usuario'];
+    $senha = $_POST['senha'];
+
+    //Buscar o usuário no banco
+    $sql = "SELECT *FROM usuarios WHERE email =?";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$email]);
+
+    $usuario = $stmt->fetch();
+
+    //Verificar a senha
+    if($usuario && password_verify($senha, $usuario['senha'])){
+        $_SESSION['usuario']= $usuario['email'];
+
+        header('location: dashboard.php');
         exit;
-    }
-
+}
     // Login errado
     header('Location: index.php?erro=true');
     exit;

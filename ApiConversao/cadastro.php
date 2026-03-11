@@ -12,10 +12,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     $stmt = $pdo->prepare($sql);
 
+    try{
     $stmt->execute([$nome, $email, $senhaHash]);
-
-    // echo  "Usuário cadastrado com sucesso!";
      print"<script>alert('Cadastro realizado com sucesso')</script>";
+
+    }catch (PDOException $e){
+        print"<script>alert('Este email já está cadatrado.')</script>";
+    }
 }
 
 ?>
@@ -37,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form  method="post">
            <div class="input-box">
                 <input type="text" name="nome" placeholder="Nome" required>
-                <i class="bx bxs-user"></i>
+                
             </div>
             <div class="input-box">
                 <input type="email" name="email" placeholder="Email" required>

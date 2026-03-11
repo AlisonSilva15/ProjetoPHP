@@ -44,13 +44,13 @@ if (isset($_GET['erro'])) {
             </div>
 
             <div class="remember-forgot">
-                <a href="#">Esqueci senha</a>
+                <a href="esqueci_senha.php">Esqueci a senha</a>
             </div>
 
             <button type="submit" class="login">Login</button>
 
             <div class="register-link">
-                <p>Não possui uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+                <p>Não possui uma conta?<a href="cadastro.php">Cadastre-se</a></p>
             </div>
         </form>
     </main>
