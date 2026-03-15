@@ -1,5 +1,5 @@
 <?php 
-require 'conexao.php';
+require '../config/conexao.php';
 
 
 
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
 <meta charset="UTF-8">
 <title>Recuperar senha</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <button type="submit" class="login">Alterar senha</button>
 
     <div class="register-link">
-        <a href="logout.php">Sair</a>
+        <a href="../controllers/logout.php">Sair</a>
         </div>
 
     </form>

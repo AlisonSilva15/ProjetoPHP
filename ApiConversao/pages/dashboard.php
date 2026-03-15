@@ -1,5 +1,5 @@
 <?php
-include 'auth.php';
+include '../controllers/auth.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,7 +7,7 @@ include 'auth.php';
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -15,12 +15,12 @@ include 'auth.php';
 
         <h1>Converta Real para Dólar</h1>
         <form action="conversao.php" method="get" class="form-dashboard">
-            <label for="din">Quantos R$ você possui?</label>
+            <label for="din">Quantos R$  você possui?</label>
             <input type="number" name="din" id="din" step="0.01">
             <input class="login" type="submit" value="Converter">
         </form>
         <div class="register-link">
-        <a href="logout.php">Sair</a>
+        <a href="../controllers/logout.php">Sair</a>
         </div>
     </main>
 

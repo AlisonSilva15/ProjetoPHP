@@ -14,7 +14,7 @@ if (isset($_GET['erro'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Login</title>
 </head>
 
@@ -24,7 +24,7 @@ if (isset($_GET['erro'])) {
     <main class="container">
 
 
-        <form method="post" action="auth.php">
+        <form method="post" action="../controllers/auth.php">
             <h1>Conversor de Moedas</h1>
 
             <?php if ($erro): ?>
@@ -35,7 +35,7 @@ if (isset($_GET['erro'])) {
 
             <div class="input-box">
                 <input type="email" name="usuario" placeholder="Seu email" required>
-                <i class="bx bxs-user"></i>
+                <i class="bx bx-at"></i>
             </div>
 
             <div class="input-box">
@@ -50,7 +50,7 @@ if (isset($_GET['erro'])) {
             <button type="submit" class="login">Login</button>
 
             <div class="register-link">
-                <p>Não possui uma conta?<a href="cadastro.php">Cadastre-se</a></p>
+                <p>Não possui uma conta? <a href="../pages/cadastro.php">Cadastre-se</a></p>
             </div>
         </form>
     </main>

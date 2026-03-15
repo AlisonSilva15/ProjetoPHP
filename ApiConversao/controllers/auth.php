@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'conexao.php';
+require '../config/conexao.php';
 /*
 |--------------------------------------------------------------------------
 | — LOGIN (recebe POST)
@@ -25,11 +25,11 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST') {
     if($usuario && password_verify($senha, $usuario['senha'])){
         $_SESSION['usuario']= $usuario['email'];
 
-        header('location: dashboard.php');
+        header('Location: ../pages/dashboard.php');
         exit;
 }
     // Login errado
-    header('Location: index.php?erro=true');
+    header('Location: ../pages/index.php?erro=true');
     exit;
 }
 

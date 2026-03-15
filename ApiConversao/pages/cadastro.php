@@ -1,5 +1,5 @@
 <?php
-require 'conexao.php';
+require '../config/conexao.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nome = $_POST["nome"];
@@ -29,7 +29,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
     
 </head>
 
@@ -40,11 +41,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form  method="post">
            <div class="input-box">
                 <input type="text" name="nome" placeholder="Nome" required>
+                <i class="bx bxs-user"></i>
                 
             </div>
             <div class="input-box">
                 <input type="email" name="email" placeholder="Email" required>
-                <i class="bx bxs-user"></i>
+                <i class="bx bx-at"></i>
             </div>
 
             <div class="input-box">
@@ -58,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
         </form>
         <div class="register-link">
-        <a href="logout.php">Sair</a>
+        <a href="../controllers/logout.php">Sair</a>
         </div>
     </main>
 
