@@ -14,14 +14,14 @@ conexão com banco de dados e organização de projeto**.
 
 O sistema possui as seguintes funcionalidades:
 
--   🔐 Login de usuário\
--   📝 Cadastro de novos usuários\
--   🔑 Recuperação de senha\
--   🚪 Logout do sistema\
--   📊 Dashboard protegido por sessão\
--   💱 Conversor de moedas utilizando API\
--   🗄 Armazenamento de usuários em banco de dados\
--   ⚠️ Validação para impedir emails duplicados\
+-   🔐 Login de usuário
+-   📝 Cadastro de novos usuários
+-   🔑 Recuperação de senha
+-   🚪 Logout do sistema
+-   📊 Dashboard protegido por sessão
+-   💱 Conversor de moedas utilizando API
+-   🗄 Armazenamento de usuários em banco de dados
+-   ⚠️ Validação para impedir emails duplicados
 -   🔒 Senhas armazenadas com hash seguro (`password_hash`)
 
 ------------------------------------------------------------------------
